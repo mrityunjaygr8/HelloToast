@@ -3,14 +3,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/activity_margin_bottom"
+    android:layout_marginTop="@dimen/activity_margin_top"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/button_toast"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_weight="1"
+        android:background="?attr/colorPrimary"
+        android:onClick="showToast"
+        android:text="@string/toast_button_text"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/button_text_size" />
 
-        />
+    <TextView
+        android:id="@+id/count_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="2"
+        android:background="@color/text_background_color"
+        android:gravity="center"
+        android:text="@string/count_initial_value"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="@dimen/count_text_size"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="?attr/colorPrimary"
+        android:onClick="countUp"
+        android:text="@string/count_button_text"
+        android:textColor="@android:color/white"
+        android:textSize="25sp" />
 </LinearLayout>
